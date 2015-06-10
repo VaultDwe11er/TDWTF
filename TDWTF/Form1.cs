@@ -32,7 +32,6 @@ namespace TDWTF
         private void GetMissingLikes()
         {
             int i = int.Parse(textBox1.Text);
-            i -= 30;
             bool found = false;
             int postCnt = int.MaxValue;
 
@@ -42,9 +41,16 @@ namespace TDWTF
 
             wc.Headers.Add(HttpRequestHeader.Cookie, cookies.GetCookieHeader(webBrowser1.Url));
 
-            while (!found && i <= postCnt)
+            String patMissingLike = "\"id\":2,\"count\":\\d*,\"hidden\":false,\"can_act\":true";
+            String patPostCnt = "(\"highest_post_number\":)(\\d*)(?!.*\"highest_post_number\":)";
+            String patLastPost = "(\"post_number\":)(\\d*)(?!.*\"post_number\":)";
+
+            Regex reMissingLike = new Regex(patMissingLike);
+            Regex rePostCnt = new Regex(patPostCnt);
+            Regex reLastPost = new Regex(patLastPost);
+
+            while (!found && i < postCnt)
             {
-                i += 30;
                 toolStripStatusLabel1.Text = "Processing (i = " + i.ToString() + ")...";
                 this.Refresh();
                 this.Update();
@@ -63,16 +69,11 @@ namespace TDWTF
                     return;
                 }
 
-                String pat1 = "\"id\":2,\"count\":\\d*,\"hidden\":false,\"can_act\":true";
-                String pat2 = "(\"highest_post_number\":)(\\d*)(?!.*\"highest_post_number\":)";
-
-                Regex r1 = new Regex(pat1);
-                Regex r2 = new Regex(pat2);
-
-                found = r1.Match(json).Success;
+                found = reMissingLike.Match(json).Success;
                 //found = true;
 
-                postCnt = int.Parse(r2.Match(json).Groups[2].Value);
+                postCnt = int.Parse(rePostCnt.Match(json).Groups[2].Value);
+                i = int.Parse(reLastPost.Match(json).Groups[2].Value) + 1;
             }
 
             toolStripStatusLabel1.Text = found ? "Done. Found at " + i : "No likes missed (postCnt = " + postCnt + ")";
