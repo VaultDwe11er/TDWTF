@@ -1,0 +1,9 @@
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\bin\Debug\TDWTF.exe.config
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\bin\Debug\TDWTF.exe
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\bin\Debug\TDWTF.pdb
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\obj\Debug\TDWTF.csprojResolveAssemblyReference.cache
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\obj\Debug\TDWTF.Form1.resources
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\obj\Debug\TDWTF.Properties.Resources.resources
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\obj\Debug\TDWTF.csproj.GenerateResource.Cache
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\obj\Debug\TDWTF.exe
+c:\users\quentin\documents\visual studio 2012\Projects\TDWTF\TDWTF\obj\Debug\TDWTF.pdb
