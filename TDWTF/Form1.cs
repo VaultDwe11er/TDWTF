@@ -31,7 +31,7 @@ namespace TDWTF
 
         private void GetMissingLikes()
         {
-            int i = int.Parse(textBox1.Text);
+            int i = int.Parse(tbStartPos.Text);
             bool found = false;
             int postCnt = int.MaxValue;
 
@@ -41,9 +41,11 @@ namespace TDWTF
 
             wc.Headers.Add(HttpRequestHeader.Cookie, cookies.GetCookieHeader(webBrowser1.Url));
 
-            String patMissingLike = "\"id\":2,\"count\":\\d*,\"hidden\":false,\"can_act\":true";
+            String patMissingLike = "\"id\":2,\"count\":\\d*,\"can_act\":true";
             String patPostCnt = "(\"highest_post_number\":)(\\d*)(?!.*\"highest_post_number\":)";
             String patLastPost = "(\"post_number\":)(\\d*)(?!.*\"post_number\":)";
+
+            String topicId = tbTopicId.Text;
 
             Regex reMissingLike = new Regex(patMissingLike);
             Regex rePostCnt = new Regex(patPostCnt);
@@ -59,7 +61,7 @@ namespace TDWTF
 
                 try
                 {
-                    json = wc.DownloadString(@"http://what.thedailywtf.com/t/1000/" + i.ToString() + ".json");
+                    json = wc.DownloadString(@"http://what.thedailywtf.com/t/" + topicId + "/" + i.ToString() + ".json");
                 }
                 catch (WebException)
                 {

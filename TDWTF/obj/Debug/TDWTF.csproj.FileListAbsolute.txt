@@ -16,3 +16,12 @@ C:\Users\Quentin\Downloads\Coursera\TDWTF\TDWTF\obj\Debug\TDWTF.Properties.Resou
 C:\Users\Quentin\Downloads\Coursera\TDWTF\TDWTF\obj\Debug\TDWTF.csproj.GenerateResource.Cache
 C:\Users\Quentin\Downloads\Coursera\TDWTF\TDWTF\bin\Debug\TDWTF.exe
 C:\Users\Quentin\Downloads\Coursera\TDWTF\TDWTF\bin\Debug\TDWTF.pdb
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\bin\Debug\TDWTF.exe.config
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\obj\Debug\TDWTF.exe
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\obj\Debug\TDWTF.pdb
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\bin\Debug\TDWTF.exe
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\bin\Debug\TDWTF.pdb
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\obj\Debug\TDWTF.csprojResolveAssemblyReference.cache
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\obj\Debug\TDWTF.Form1.resources
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\obj\Debug\TDWTF.Properties.Resources.resources
+C:\Users\Quentin\Documents\GitHub\TDWTF\TDWTF\obj\Debug\TDWTF.csproj.GenerateResource.Cache

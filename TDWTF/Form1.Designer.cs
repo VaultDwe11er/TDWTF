@@ -34,7 +34,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbStartPos = new System.Windows.Forms.TextBox();
+            this.tbTopicId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(631, 146);
+            this.button1.Location = new System.Drawing.Point(631, 178);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 38);
             this.button1.TabIndex = 1;
@@ -62,7 +64,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(631, 103);
+            this.button2.Location = new System.Drawing.Point(631, 135);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 37);
             this.button2.TabIndex = 1;
@@ -88,25 +90,44 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(628, 23);
+            this.label1.Location = new System.Drawing.Point(628, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Starting position:";
             // 
-            // textBox1
+            // tbStartPos
             // 
-            this.textBox1.Location = new System.Drawing.Point(631, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 20);
-            this.textBox1.TabIndex = 5;
+            this.tbStartPos.Location = new System.Drawing.Point(631, 109);
+            this.tbStartPos.Name = "tbStartPos";
+            this.tbStartPos.Size = new System.Drawing.Size(159, 20);
+            this.tbStartPos.TabIndex = 5;
+            // 
+            // tbTopicId
+            // 
+            this.tbTopicId.Location = new System.Drawing.Point(631, 60);
+            this.tbTopicId.Name = "tbTopicId";
+            this.tbTopicId.Size = new System.Drawing.Size(159, 20);
+            this.tbTopicId.TabIndex = 5;
+            this.tbTopicId.Text = "1000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(628, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Topic id:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 261);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbTopicId);
+            this.Controls.Add(this.tbStartPos);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button2);
@@ -129,7 +150,9 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbStartPos;
+        private System.Windows.Forms.TextBox tbTopicId;
+        private System.Windows.Forms.Label label2;
     }
 }
 
