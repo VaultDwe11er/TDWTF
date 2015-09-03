@@ -72,10 +72,9 @@ namespace TDWTF
                 }
 
                 found = reMissingLike.Match(json).Success;
-                //found = true;
 
                 postCnt = int.Parse(rePostCnt.Match(json).Groups[2].Value);
-                i = int.Parse(reLastPost.Match(json).Groups[2].Value) + 1;
+                if(!found) i = int.Parse(reLastPost.Match(json).Groups[2].Value) + 1;
             }
 
             toolStripStatusLabel1.Text = found ? "Done. Found at " + i : "No likes missed (postCnt = " + postCnt + ")";
