@@ -41,9 +41,9 @@ namespace TDWTF
 
             wc.Headers.Add(HttpRequestHeader.Cookie, cookies.GetCookieHeader(webBrowser1.Url));
 
-            String patMissingLike = "\"id\":2,\"count\":\\d*,\"can_act\":true";
-            String patPostCnt = "(\"highest_post_number\":)(\\d*)(?!.*\"highest_post_number\":)";
-            String patLastPost = "(\"post_number\":)(\\d*)(?!.*\"post_number\":)";
+            String patMissingLike = "\"upvoted\":false";
+            String patPostCnt = "(\"postcount\":)(\\d*)(,\"viewcount\")";
+            String patLastPost = "(\"index\":)(\\d*)(?!.*\"index\":)";
 
             String topicId = tbTopicId.Text;
 
@@ -57,11 +57,12 @@ namespace TDWTF
                 this.Refresh();
                 this.Update();
 
-                string json;
+                string json = "xxx";
 
                 try
                 {
-                    json = wc.DownloadString(@"http://what.thedailywtf.com/t/" + topicId + "/" + i.ToString() + ".json");
+                    json = wc.DownloadString(@"https://what.thedailywtf.com/api/topic/" + topicId + "/post/" + i.ToString());
+
                 }
                 catch (WebException)
                 {
@@ -71,10 +72,11 @@ namespace TDWTF
                     return;
                 }
 
+
                 found = reMissingLike.Match(json).Success;
 
                 postCnt = int.Parse(rePostCnt.Match(json).Groups[2].Value);
-                if(!found) i = int.Parse(reLastPost.Match(json).Groups[2].Value) + 1;
+                if (!found) i = int.Parse(reLastPost.Match(json).Groups[2].Value) + 1;
             }
 
             toolStripStatusLabel1.Text = found ? "Done. Found at " + i : "No likes missed (postCnt = " + postCnt + ")";

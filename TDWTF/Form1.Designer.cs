@@ -46,9 +46,10 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(601, 261);
             this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("http://what.thedailywtf.com", System.UriKind.Absolute);
+            this.webBrowser1.Url = new System.Uri("https://what.thedailywtf.com", System.UriKind.Absolute);
             // 
             // button1
             // 
@@ -109,7 +110,7 @@
             this.tbTopicId.Name = "tbTopicId";
             this.tbTopicId.Size = new System.Drawing.Size(159, 20);
             this.tbTopicId.TabIndex = 5;
-            this.tbTopicId.Text = "1000";
+            this.tbTopicId.Text = "11847";
             // 
             // label2
             // 
