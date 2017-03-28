@@ -41,7 +41,7 @@ namespace TDWTF
 
             wc.Headers.Add(HttpRequestHeader.Cookie, cookies.GetCookieHeader(webBrowser1.Url));
 
-            String patMissingLike = "\"upvoted\":false";
+            String patMissingLike = "\"upvoted\":false,\"downvoted\":(true|false),\"selfPost\":false";
             String patPostCnt = "(\"postcount\":)(\\d*)(,\"viewcount\")";
             String patLastPost = "(\"index\":)(\\d*)(?!.*\"index\":)";
 
