@@ -7,5 +7,6 @@ To use:
 - Run this program
 - Click on "Low". This allows the program to use IE's cookies (I think, I'm not an expert)
 - You can close the first instance of the program
-- Input the post number you want to check from and click run
+- Wait for the website on the left to load (if you don't, the program may terminate). Check that you are actually logged in.
+- Input the post number you want to check from and click run. Note
 - Check the status bar
